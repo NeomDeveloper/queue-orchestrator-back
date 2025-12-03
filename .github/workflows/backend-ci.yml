@@ -22,6 +22,9 @@ jobs:
       - name: Install Composer dependencies
         run: composer install --prefer-dist --no-progress --no-interaction
 
+      - name: Generate application key
+        run: php artisan key:generate
+
       - name: Optimize Laravel
         run: php artisan optimize
 
