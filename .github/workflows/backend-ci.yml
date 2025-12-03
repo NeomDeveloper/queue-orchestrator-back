@@ -23,7 +23,7 @@ jobs:
         run: composer install --prefer-dist --no-progress --no-interaction
 
       - name: Generate application key
-        run: php artisan key:generate
+        run: .env.example > .env && php artisan key:generate
 
       - name: Optimize Laravel
         run: php artisan optimize
